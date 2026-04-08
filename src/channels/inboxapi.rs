@@ -34,7 +34,8 @@ const EMAIL_POLL_LIMIT: u64 = 20;
 // ── Config ──────────────────────────────────────────────────────────────────
 
 /// InboxAPI channel configuration — agent-native email via InboxAPI MCP.
-#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, zeroclaw_macros::Configurable)]
+#[prefix = "channels.inboxapi"]
 pub struct InboxApiConfig {
     /// MCP endpoint URL.
     #[serde(default = "default_endpoint")]

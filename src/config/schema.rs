@@ -6398,6 +6398,7 @@ pub struct ChannelsConfig {
     #[nested]
     pub imessage: Option<IMessageConfig>,
     /// InboxAPI channel configuration (agent-native email).
+    #[nested]
     pub inboxapi: Option<crate::channels::inboxapi::InboxApiConfig>,
     /// Matrix channel configuration.
     #[nested]
